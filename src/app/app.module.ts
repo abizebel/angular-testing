@@ -7,12 +7,16 @@ import { serverComponent } from './server/server.component';
 import {cpuComponent} from './cpu/cpu.component'
 import {ramComponent} from './ram/ram.component'
 
+
+import { ListComponent } from "./list/list.component";
+
 @NgModule({
   declarations: [
     AppComponent,
     serverComponent,
     cpuComponent,
-    ramComponent
+    ramComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,

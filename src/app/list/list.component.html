@@ -1,0 +1,18 @@
+
+<br>
+<h2>list componeent</h2>
+
+<!-- Way 1 - get input value by event -->
+<label>Add data by input event</label><input type="text" (input)="add1($event)">
+
+<!-- Way 2 - to add data to model -->
+<br><br>
+<label for="">Type Your item to add</label>
+<input type="text" #newitem>
+<button type="button" (click)="add2(newitem)">Add</button>
+
+
+
+<ul>
+    <li *ngFor="let item of list">{{item.title}}</li>
+</ul>
