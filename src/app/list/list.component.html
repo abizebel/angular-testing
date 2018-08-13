@@ -14,5 +14,9 @@
 
 
 <ul>
-    <li *ngFor="let item of list">{{item.title}}</li>
+    <li *ngFor="let item of list">
+        <app-box [name]="item.title"></app-box>
+    </li>
 </ul>
+
+

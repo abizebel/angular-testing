@@ -13,7 +13,7 @@ export class serverComponent implements OnInit {
   serverId :number = 25;
   serverState: boolean = false;
   allowNewServer : boolean = false;
-  serverDesc  : string  = 'this server is for it deparment';
+  serverDescvalue  : string  = 'this server is for it deparment';
   serverList : any  = [{name:'server1'}];
 
   constructor () {

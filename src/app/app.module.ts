@@ -9,6 +9,7 @@ import {ramComponent} from './ram/ram.component'
 
 
 import { ListComponent } from "./list/list.component";
+import { BoxComponent } from "./box/box.component";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { ListComponent } from "./list/list.component";
     serverComponent,
     cpuComponent,
     ramComponent,
-    ListComponent
+    ListComponent,
+    BoxComponent
+
   ],
   imports: [
     BrowserModule,

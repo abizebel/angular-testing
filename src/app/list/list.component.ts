@@ -11,7 +11,7 @@ import {List} from '../shared/list.model';
 
 
 export class ListComponent implements OnInit {
-    @Input() newItem: string;
+
     list : List [] = [
         new List('item1'),
         new List('item2')
@@ -24,7 +24,7 @@ export class ListComponent implements OnInit {
         this.list.push({title:(<HTMLInputElement>event.target).value})
     }
     add2 (newItem : HTMLInputElement) {
-        this.list.push({title:newItem.value)
+        this.list.push({title:newItem.value});
     }
     ngOnInit(){}
 }
