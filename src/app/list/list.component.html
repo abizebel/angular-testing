@@ -1,22 +1,49 @@
+<h2>List componeent- Types of binding input value to mode;</h2>
 
+
+<!-- Way 1 for ui add to model - using event -->
+<label>Add data by input event </label>
+<input type="text" (input)="add1($event)">
+
+<!-- Way 2 add ui to model - using # sign -->
 <br>
-<h2>list componeent</h2>
-
-<!-- Way 1 - get input value by event -->
-<label>Add data by input event</label><input type="text" (input)="add1($event)">
-
-<!-- Way 2 - to add data to model -->
-<br><br>
-<label for="">Type Your item to add</label>
+<br>
+<label for="">Add data by input # sign </label>
 <input type="text" #newitem>
 <button type="button" (click)="add2(newitem)">Add</button>
 
+<!-- Way 3 add ui to model - using ngModel -->
+<br>
+<br>
+<label for="">Add by ngModel </label>
+<input type="text" [(ngModel)]="ngModelItem">
+<button type="button" (click)="add3()">Add</button>
 
-
+<!-- Allow parent bind to child - using @input decorator + using *ngFor -->
 <ul>
-    <li *ngFor="let item of list">
-        <app-box [name]="item.title"></app-box>
-    </li>
+  <li *ngFor="let item of list">
+    <app-box [listItem]="item"></app-box>
+  </li>
 </ul>
+
+<hr>
+<!--Allow child be listenable for parent - subscribe to a custom event with @output decorator -->
+<h2>Counter Component - Using custom event</h2>
+<app-counter (change)="countChange($event)"></app-counter>
+
+
+
+<hr>
+<h2>Using ngIf + ngClass + ngStyle</h2>
+
+<div [ngStyle]="{'background' :(list.length>0 ?'green' :'red')}"
+     [ngClass] ="{'empty' : list.length == 0,'notempty' : list.length>0}">
+
+  <p *ngIf="list.length>0 ; else elseBlock">List is not empty</p>
+  <ng-template #elseBlock>
+    <p>List is empty</p>
+  </ng-template>
+
+</div>
 
 
