@@ -1,10 +1,17 @@
-import {
-    Component,
-    Input,
-    Injectable,
-    OnInit, 
-} from '@angular/core';
+import {Component, OnInit, Input, Injectable} from '@angular/core';
 import {List} from '../shared/list.model';
+
+/**
+ * List of Contents : 
+ * 1- Ways to bind ui data to component (ngModel - event - local refrence in ListComponent)
+ * 2- Custom evetns (CounterComponent)
+ * 3- Lifecycle (BoxComponent)
+ * 4- @input : a decorator that defines a set of parameters that can be passed (BoxComponent)
+ * 5- @Output : a decorator that defines a custom event that listenable in outside (CounterComponent)
+ * 6- Custom directives (@Directive decorator and access to dom with ElementRef in hightlightComponent)
+ */
+
+
 
 @Component ({
     selector  :'app-list',
@@ -12,14 +19,7 @@ import {List} from '../shared/list.model';
     templateUrl :'./list.component.html',
 })
 
-/**
- * List of Contents : 
- * 1- Ways to bind ui data to component (ngModel - event - local refrence)
- * 2- Custom evetns (CounterComponent)
- * 3- Lifecycle (BoxComponent)
- * 4- @input : a decorator that defines a set of parameters that can be passed (BoxComponent)
- * 5- @Output :a decorator that defines a custom event that listenable in outside (CounterComponent)
- */
+
 
 
 export class ListComponent implements OnInit {
@@ -29,15 +29,14 @@ export class ListComponent implements OnInit {
         new List('item2')
     ];
 
-    constructor (){
-    }
+    constructor (){}
 
     // Way 1 for add ui to model - using event
     add1 (event : any) {
         this.list.push({name:(<HTMLInputElement>event.target).value})
     }
 
-    // Way 2 add ui to model - using local refrence
+    // Way 2 add ui to model - using # sign
     add2 (newItem : HTMLInputElement) {
         this.list.push({name:newItem.value});
     }
@@ -52,7 +51,6 @@ export class ListComponent implements OnInit {
     countChange($event) {
        console.log($event);
     }
+
     ngOnInit(){}
-
-
 }

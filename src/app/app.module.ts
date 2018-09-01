@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { ListComponent } from "./list/list.component";
 import { BoxComponent } from "./box/box.component";
 import { CounterComponent } from "./counter/counter.component";
+import {HightlightDirective} from "./highlight/hightlight.directive";
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
     BoxComponent,
-    CounterComponent
+    CounterComponent,
+    HightlightDirective
 
   ],
   imports: [
