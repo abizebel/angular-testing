@@ -8,7 +8,8 @@ import {List} from '../shared/list.model';
  * 3- Lifecycle (BoxComponent)
  * 4- @input : a decorator that defines a set of parameters that can be passed (BoxComponent)
  * 5- @Output : a decorator that defines a custom event that listenable in outside (CounterComponent)
- * 6- Custom directives (@Directive decorator and access to dom with ElementRef in hightlightComponent)
+ * 6- Custom directives attribute type (  in highlightComponent)
+ * 7- Custom directives structral type (  in isOpenDirective)
  */
 
 

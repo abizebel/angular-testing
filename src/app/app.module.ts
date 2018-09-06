@@ -8,6 +8,8 @@ import { ListComponent } from "./list/list.component";
 import { BoxComponent } from "./box/box.component";
 import { CounterComponent } from "./counter/counter.component";
 import {HightlightDirective} from "./highlight/hightlight.directive";
+import {IsOpenDirective} from "./open/open.directive";
+
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import {HightlightDirective} from "./highlight/hightlight.directive";
     ListComponent,
     BoxComponent,
     CounterComponent,
-    HightlightDirective
+    HightlightDirective,
+    IsOpenDirective,
 
   ],
   imports: [
